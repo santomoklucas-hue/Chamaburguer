@@ -1,57 +1,181 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+                          <!--Abaixo temos a barra do browser-->
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>ChamaBurger</title>        
+   <title>ChamaBurger</title>
 </head>
+                     <!--Abaixo temos a linha de codigo do cabeçario-->
 <body>
-    <header class="cabecalho-site">
-    
-        <nav class="barra-navegacao">
-          <a href="#" class="logo">❤️‍🔥 CHAMA BURGER</a>
-           
-            <ul class="menu-links" id="menlinks">
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#reserva">Reservar</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <a href="#pedir" class="botao botao-nav">Peça agora</a>
-            <button class="menu-abrir" id="menuAbrir" aria-label="abrir menu">☰</button>
-        </nav>
-    </header>
-    
-    <main>
-           <section class="destaque">
-              <div class="destaque-conteudoinformativo">
-                  <div class="destaque-texto"> 
-                        <h1>Burger de Verdade,<br>na brasa.</h1>
-                             <p>Pão brioche, carne 160g grelhada na hora e ingredientes fresquinhos - sem enrolação.</p>
-                             <a href="#cardapio" class="botao botao-primario">Ver Cardápio</a>
-                  </div>
-                     <div class="destaque-imagem">
-                        <img src="assets/img/Gemini_Generated_Image_z8flgxz8flgxz8fl.jpg" alt="Hambúrguer artesanal com bacon, queijo, tomate, alface, cebola e pão brioche, grelhado na brasa">
-                     </div>
-              </div>
-           </section>
+   <header class="cabecalho-site">
 
-            <section class="cardapio" id="cardapio">
-               <h2>nosso Cardápio</h2>
-               <div class="cardapio-itens">
-                <article class="cardapio-item">
-                   <div class="cardapio-item-img">
-                       <img src="assets/img/burger-classico.jpg" alt="Foto do burguer Clássico: pão brioche, carne e queijo">
-                   </div>
-                   <h3>Clássico</h3>
-                   <p>Pão brioche, carne 160g, queijo, alface e tomate.</p>
-                   <span class="preco">R$ 24,90</span>
-                   <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao Pedido</button>
-                </article>
-               </div>         
-            </section>
-    </main>
+      <nav class="barra-navegacao">
+         <a href="#" class="logo">❤️‍🔥 CHAMA BURGER</a>
+
+         <ul class="menu-links" id="menlinks">
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#reserva">Reservar</a></li>
+            <li><a href="#contato">Contato</a></li>
+         </ul>
+         <a href="#pedir" class="botao botao-nav">Peça agora</a>
+         <button class="menu-abrir" id="menuAbrir" aria-label="abrir menu">☰</button>
+      </nav>
+   </header>
+                        <!--Abaixo temos a linha de codigo do Cardapio-->
+   <main>
+      <section class="destaque">
+         <div class="destaque-conteudoinformativo">
+            <div class="destaque-texto">
+               <h1>Burger de Verdade,<br>na brasa.</h1>
+               <p>Pão brioche, carne 160g grelhada na hora e ingredientes fresquinhos - sem enrolação.</p>
+               <a href="#cardapio" class="botao botao-primario">Ver Cardápio</a>
+            </div>
+            <div class="destaque-imagem">
+               <img src="assets/img/Gemini_Generated_Image_z8flgxz8flgxz8fl.jpg"
+                  alt="Hambúrguer artesanal com bacon, queijo, tomate, alface, cebola e pão brioche, grelhado na brasa">
+            </div>
+         </div>
+      </section>
+      <section class="cardapio" id="cardapio">
+         <h2>nosso Cardápio</h2>
+         <div class="cardapio-itens">
+            <article class="cardapio-item">
+               <div class="cardapio-item-img">
+                  <img src="assets/img/burger-classico.jpg" alt="Foto do burguer Clássico: pão brioche, carne e queijo">
+               </div>
+               <h3>Clássico</h3>
+               <p>Pão brioche, carne 160g, queijo, alface e tomate.</p>
+               <span class="preco">R$ 24,90</span>
+               <button class="adicionar-carrinho" data-name="Clássico" data-preco="24.90">Adicionar ao Pedido</button>
+            </article>
+            <article class="cardapio-item">
+               <span class="selo">Mais pedido</span>
+               <div class="cardapio-item-img">
+                  <img src="assets/img/burger-bacon.jpg"
+                     alt="Foto do Baccon Clássico: pão brioche, carne, bacon, alface e queijo">
+               </div>
+               <h3>Clássico bacon</h3>
+               <p>Pão brioche, carne 160g, queijo, bacon, alface e tomate.</p>
+               <span class="preco">R$ 29,90</span>
+               <button class="adicionar-carrinho" data-name="Bacon" data-preco="29.90">Adicionar ao
+                  Pedido</button>
+            </article>
+            <article class="cardapio-item">
+               <div class="cardapio-item-img">
+                  <img src="assets/img/burger-veggie.jpg"
+                     alt="Foto do burguer veggie: pão brioche, carne veggie, tomate e alface">
+               </div>
+               <h3>Veggie</h3>
+               <p>Pão brioche, hamburguer de grão de bico, alface e tomate.</p>
+               <span class="preco">R$ 20,90</span>
+               <button class="adicionar-carrinho" data-name="Veggie" data-preco="20.90">Adicionar ao Pedido</button>
+            </article>
+            <article class="cardapio-item">
+               <div class="cardapio-item-img cardapio-item-imagem-combo">
+                  <img src="assets/img/fritas.jpg" alt="Foto batata frita">
+                  <img src="assets/img/bebida.jpg" alt="foto do Refrigerante">
+               </div>
+               <h3>Combo Batata + Refrigerante</h3>
+               <p>Porção de 250g de Batata + Refrigerante.</p>
+               <span class="preco">R$ 19,90</span>
+               <button class="adicionar-carrinho" data-name="Combo Batata + Refrigerante" data-preco="19.90">Adicionar ao Pedido</button>
+            </article>
+         </div>
+      </section>
+                           <!--abaixo temos informações sobre o chama burguer--> 
+   <section class="sobre" id="sobre">
+      <div class="sobre-imagem"></div>
+         <img src="assets/img/sobre-burger.jpg" alt="hamburguers numa grelha" width="800" height="500">
+              <div>
+                   <span class=secao-rotulo>Nossa História</span>    
+                   <h2>Comida de Boteco, com capricho de churrasco</h2>
+                   <p>O chama Burguer começou numa churrasqueira de quintal, testando receitas com os amigos. Hoje, o método continua o mesmo: carne grelhada na brasa, pão fresco do diae ingredientes comprados na feira - só que agora pra atender o bairro inteiro.</p>
+                   <a href="#cardapio" class="link-seta">Ver Cárdapio Completo →</a>
+              </div>
+   </section>
+                                           <!--Depoimemtos abaixo-->
+   <section class="depoimentos" id="depoimentos">
+      <h2>Quem Prova, Volta!</h2>
+          <div depoimentos="lista">
+            <article class="depoimento">
+               <img src="assets/img/avatar-thiago.jpg" alt="esse é o Renato" class="avatar">
+               <p class="citacao">melhor bacon burguer que eu ja comi na vida, muito saboroso!</p>
+               <p class="autor"> Renato Montanhão <span>- cliente frequente</span></p>
+            </article>
+            <article class="depoimento">
+               <img src="assets/img/avatar-marina.jpg" alt="essa é a Evelyn" class="avatar">
+               <p class="citacao">melhor Veggie burguer que eu ja comi na vida, o grão de bico estaba maravilhoso acompanhou muito bem com as batatas!</p>
+               <p class="autor"> Evelyn Bree <span>- cliente frequente</span></p>
+            </article>
+            <article class="depoimento">
+               <img src="assets/img/avatar-pedro.jpg" alt="esse é o Lucas" class="avatar">
+               <p class="citacao">melhor bacon burguer que eu ja comi na vida, muito saboroso!</p>
+               <p class="autor"> Lucas Cezar <span>- cliente frequente</span></p>
+            </article>
+          </div>
+   </section>
+                                         <!--Reserva-->
+         <section class="reserva" id="reserva">
+             <h2>Reserve sua Mesa</h2>
+             <p>Prefere comer no salão? deixe seus dados que confirmamos por telefone.</p>
+ 
+             <form class="reserva-formulario" id="reservaFormulario"></form>
+ 
+          <div class="linha-formulario">
+             <label for="nome">Nome</label>
+             <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+          </div>
+          
+          <div class="linha-formulario">
+             <label for="telefone">Telefone</label>
+             <input type="tel" id="telefone" name="telefone" placeholder="(11) 0000-0000" required>
+          </div>
+          
+          <div class="linha-formulario">
+             <label for="data">Data</label>
+             <input type="date" id="data" name="data" required>
+          </div>
+
+          <div class="linha-formulario">
+             <label for="pessoas">Número de Pessoas</label>
+             <select name="Pessoas" id="pessoas">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+             </select>
+          </div>
+
+          <div class="linha-formulario linha-formulario-completa">
+            <label for="mengagem">Observações (opcional)</label>
+            <textarea name="mensagem" id="mensagem" rows="3" placeholder="digite seu texto"></textarea> 
+          </div>
+
+          <div class="linha formulario linha-formulario-completa">
+            <label for="foto">Foto de Referencia (Opcional)</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+            
+            <img id="fotoPrevia" class="foto-previa" alt="Prévia da imagem Selecionada" hidden>
+             <button type="submit" class="botao botao-primario formulario-enviar">Confirmar Reserva</button>
+          </div>
+          
+         
+
+
+
+
+
+
+
+
+</section>
+   
+</main>
 
 </body>
+
 </html>
