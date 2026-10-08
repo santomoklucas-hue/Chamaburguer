@@ -5,6 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>ChamaBurger</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
                      <!--Abaixo temos a linha de codigo do cabeçario-->
 <body>
@@ -165,19 +167,36 @@
          </form>
           <div class="reserva-confirmacao" id="reservaconfirmacao"> </div>
          </section>
-                                  <!--- Barra do final abaixo-->
-
+                                 
+                           <!--- Barra do final abaixo-->
 
            <section class=bateu-fome id=bateufome>
-            <h1>BATEU A FOME?</h1>
-            <p>peça o delivery ou venha comer no salão - abrimos todos os <br> dias, das 18 á meia-noite</p>
-            <a target="_blank" href="https://www.whatsapp.com/contact?lang=pt">Nósso Numero de Wathsapp</a>
-        
+            <h2>BATEU A FOME?</h2>
+            <p>peça o delivery ou venha comer no salão - abrimos todos os dias, das 18 á meia-noite</p>
+            <a target="_blank" href="https://www.whatsapp.com/contact?lang=pt" class="botao botao-destaque">Peça pelo WhatsApp</a>
            </section>
+         </main>
+         
+         <footer class="rodape-site" id="contato">
+            <div class="rodape-info">
+               <p>&copy; 2026 Chama Burguer - Rua das Brasas, 123, São caetano do Sul</p>
+               <p class="rodape-horario">todos os dias, das 18 á meia noite</p>
+            </div>
+          
+            <ul class="rodape-links">  
+            <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>
+            <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a></li>
+            <li><a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a></li>
+            <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i><span>TikTok</span></a></li>
+            <li><a href="#" aria-label="Ver no mapa"><i class="fa-solid fa-location-dot"></i><span>Ver no mapa</span></a></li>
+             </ul> 
+         </footer>
+         <div class="carrinho-resumo" id="carinhoResumo">
+         <span class="carrinho-incone">🛒</span>  
+         <span class="carrinhoContador">0</span> itens . <span id="carrinhoTotal">R$ 0,00</span>
 
-   
-</main>
+         </div>
 
-</body>
+       </body>
 
 </html>

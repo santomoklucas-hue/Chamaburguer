@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+  --color-primary: #e63946;    
+  --color-primary-dark: #c1272d;
+  --color-accent: #f4a300;
+  --color-dark: #201a17; 
+  --color-light: #fff7ed;
+  --color-gray: #6b7280; 
+  --radius: 14px;
+  --font-titulo: "Anton", impact, sans-serif;
+  --font-base: "inter", Roboto, Helvetica, Arial, sans-serif;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+  body { 
+    font-family: var(--font-base);
+    color: var(--color-dark);
+    line-height: 1.6;
+}
+
+  h1, h2, h3 {
+  font-family: var(--font-titulo);
+  font-weight:400;
+  letter-spacing: 0.5px;
+}
+
+  a { 
+  text-decoration: none;
+  color: inherit;
+}
+
+  ul {
+  list-style:none;
+}
+
+  img{
+  max-width: 100%;
+  display: block;  
+}
+
+ .botao { 
+  display: inline-block; 
+  border: 2px solid #201a17; 
+  
+  padding: 14px 28px;
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-base);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+  .botao:hover {
+  transform: translatey(-2px);
+}
+
+  .botao-nav {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 10px 22px;
+}
+
+  .cabecalho-site {
+  background: var(--color-dark);
+  top: 0;
+  z-index: 10;
+  position: sticky;
+}
+
+ .barra-navegacao {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding:18px 24px;
+ }
+
+ .logo {
+  font-family:var(--font-titulo) ;
+  font-size: 1.4rem;
+  color: #fff;
+  letter-spacing: 1px; 
+ }
+
+ .menu-links {
+ display: flex;
+ gap: 32px; 
+}
+
+.menu-links a {
+  color: #e8d9cd;
+  font-weight: 500;
+}
+
+.menu-links a:hover {
+  color: #fff
+}
+
+.botao-primario {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.botao-primario:hover {
+  box-shadow: 0  8px 20px rgba(244, 163, 0, 0.4);
+}
+
+.destaque {
+  background: linear-gradient(135deg, var(--color-dark),#3a241a);
+  width: 100%;
+  padding: 80px 24px;
+
+}
+
+ .destaque-conteudoinformativo {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+
+ }
