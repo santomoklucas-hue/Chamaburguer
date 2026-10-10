@@ -1,132 +1,161 @@
-*{
-    margin: 0;
-    padding: 0%;
-    box-sizing: border-box;
+/* =====================================================
+   FLEXBOX PLAYGROUND
+   Já vem pronto: reset, cores, caixas e legenda.
+   O que falta é o .container lá embaixo -- é ali que
+   vamos escrever as propriedades do flexbox juntos.
+   ===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    background: #f4f4f4;
-    padding: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  background: #f4f4f4;
+  padding: 40px;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 8px;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .dica {
-    text-align: center;
-    color: #666;
-    margin-bottom: 24px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+/* Botões de + / − caixa e legenda dos eixos */
+.controles {
+  text-align: center;
+  margin-bottom: 16px;
 }
 
 .controles button {
- font-size: 18px;
- padding: 6px 16px;
- margin: 0 4px;
- border: 2px solid #222;
- border-radius: 8px;
- background: #fff;
- cursor: pointer;
+  font-size: 18px;
+  padding: 6px 16px;
+  margin: 0 4px;
+  border: 2px solid #222;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
 }
 
 .controles button:hover {
-    background: #222;
-    color: #fff;
+  background: #222;
+  color: #fff;
 }
 
 .legenda {
-    text-align: center;
-    margin-top: 16px;
-    font-weight: bold;
+  text-align: center;
+  margin-top: 16px;
+  font-weight: bold;
 }
 
 .legenda span {
-font-display: inline-block;
-margin: 0 12px;
-padding: 6px 14px;
-color: #fff;
-border-radius: 8px;
+  display: inline-block;
+  margin: 0 12px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: #fff;
 }
 
-.legenda .principal {
-    background: #e63946;
-}
+.legenda .principal { background: #E63946; }
+.legenda .cruzado   { background: #457B9D; }
 
-.legenda .cruzado {
-    background: #457b9b;
-}
-
+/* Caixas: tamanhos DIFERENTES de propósito, pra o align-items fazer diferença.
+   box2 e box5 não têm height -> o "stretch" (padrão) estica elas. */
 .box {
-    border-radius: 12px;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.box .numero {
-    size: 28px;
-}
+.box .numero  { font-size: 28px; }
+.box .tamanho { font-size: 13px; font-weight: normal; opacity: 0.9; }
 
-.box .tamanho {
-    font-size: 13px;
-    font-weight: normal;
-    opacity: 0.9;
-}
+.box1 { background: #E63946; width: 100px; height: 100px; }
+.box2 { background: #F4A300; width: 120px; }
+.box3 { background: #457B9D; width: 100px; height: 160px; }
+.box4 { background: #2A9D8F; width: 140px; height: 80px; }
+.box5 { background: #8E44AD; width: 100px; }
+.box6 { background: #E76F51; width: 120px; height: 120px; }
 
-.box1 {
-    background: #e63946;
-    width: 100px;
-    height: 100px;
-}
-
-.box2 {
-    background: #f4a300;
-    width: 120px;
-}
-
-.box3 {
-    background: #457b9d;
-    width: 100px;
-    height: 160px;
-}
-
-.box4 {
-    background: #2a9d8f;
-    width: 140px;
-    height: 80px
-}
-
-.box5 {
-    background: #8e44ad;
-    width: 100px;
-}
-
-.box6 {
-    background: #e76f51;
-    width: 120px;
-    height: 120px;
-}
-
+/* =====================================================
+   AQUI É ONDE A AULA ACONTECE 👇   (VERSÃO DO PROFESSOR)
+   ===================================================== */
 .container {
-    border: 4px dashed #111;
-    min-height: 320px;
-    padding: 20px;
-    
-    display: flex;
-    
-    flex-direction: column-reverse;
+  border: 4px dashed #111; /* borda forte pra enxergar os limites no projetor */
+  min-height: 320px;       /* espaço vertical de sobra pro align-items fazer efeito */
+  padding: 20px;
 
-/* ↑ define o eixo principal (main axis):
- row -> itens em linha, da esquerda pra direita (padrão)
- row-reverse -> itens em linha, invertidos (6,5,4,3,2,1)
- column -> itens em coluna, de cima pra baixo
- column-reverse -> itens em coluna, invertidos
-*/
+  display: flex; /* ↑ transforma o .container num "flex container" -- todas as .box viram
+                    "flex items" e ficam lado a lado (em vez de empilhadas).
+                    Sem essa linha, nada abaixo funciona. */
 
+  /* flex-direction: row; */
+  /* ↑ define o eixo principal (main axis):
+        row            -> itens em linha, da esquerda pra direita (padrão)
+        row-reverse    -> itens em linha, invertidos (6,5,4,3,2,1)
+        column         -> itens em coluna, de cima pra baixo
+        column-reverse -> itens em coluna, invertidos
+     (olhe a legenda embaixo: ela troca os eixos sozinha) */
+
+  /* flex-wrap: nowrap; */
+  /* ↑ decide se os itens quebram linha quando não cabem:
+        nowrap -> tudo numa linha só, pode espremer ou estourar (padrão)
+        wrap   -> quebra linha quando não há espaço (use o botão "+ caixa") */
+
+  /* justify-content: flex-start; */
+  /* ↑ alinha os itens NO EIXO PRINCIPAL (horizontal, se for row):
+        flex-start    -> gruda no início (padrão)
+        center        -> centraliza
+        flex-end      -> gruda no final
+        space-between -> espaço só ENTRE os itens (pontas coladas nas bordas)
+        space-around  -> espaço igual ao redor de cada item
+        space-evenly  -> espaço igual entre TODOS, inclusive nas pontas */
+
+  /* align-items: stretch; */
+  /* ↑ alinha os itens NO EIXO CRUZADO (vertical, se for row):
+        stretch    -> estica o item pra altura toda (padrão)
+        flex-start -> gruda no topo
+        center     -> centraliza verticalmente
+        flex-end   -> gruda embaixo
+        baseline   -> alinha pela linha de base do texto
+
+     DICA: stretch só funciona em quem NÃO tem height. Aqui as caixas 2 e 5
+     não têm height de propósito -- elas esticam no padrão e "encolhem"
+     quando você troca pra flex-start/center. As outras têm height fixo. */
+
+  /* gap: 16px; */
+  /* ↑ espaço entre as caixas, sem precisar de margin em cada .box */
 }
+
+/* =====================================================
+   BÔNUS: propriedades que vão no ITEM em vez de no container.
+   ===================================================== */
+
+/* .box2 { order: -1; } */
+/* ↑ muda a ORDEM VISUAL sem mexer no HTML. Menor aparece primeiro (padrão 0). */
+
+/* .box4 { flex-grow: 1; } */
+/* ↑ faz essa caixa "crescer" e ocupar o espaço vazio que sobrar.
+     Olhe o tamanho escrito dentro da caixa mudar. */
+
+/* .box6 { align-self: flex-start; } */
+/* ↑ sobrescreve o align-items só PRA ESSA caixa. */
+
+
+
+
+
+
+
